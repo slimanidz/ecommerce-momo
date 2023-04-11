@@ -11,11 +11,10 @@ export default function Home() {
     decreaseCartQuantity,
     removeFromCart,
   } = useCartContext();
-  console.log(storeItems);
   return (
     <div>
       <NavBar />
-      <h1>Home</h1>
+      <h1 className=" px-5 py-10 text-2xl font-bold">Home</h1>
       <div className="flex flex-wrap justify-center gap-3 ">
         {storeItems.map((item) => (
           <div

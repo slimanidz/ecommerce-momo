@@ -26,15 +26,17 @@ const NavBar = () => {
         }
       >
         <BsCart4 className="w-6 h-6 md:w-8 md:h-8" />
-        <div
-          className={
-            pathname === "/cart"
-              ? "hidden"
-              : "absolute top-[-10px] right-0 text-sm text-white font-bold bg-red-500 rounded-full px-1"
-          }
-        >
-          {cartQuantity}
-        </div>
+        {cartQuantity !== 0 && (
+          <div
+            className={
+              pathname === "/cart"
+                ? "hidden"
+                : "w-4 h-4 text-white text-center text-[12px] font-bold rounded-full  bg-red-700 absolute top-0 right-0"
+            }
+          >
+            {cartQuantity}
+          </div>
+        )}
       </Link>
       <Link
         href="/about"
